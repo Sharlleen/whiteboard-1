@@ -4,7 +4,7 @@
 int check_anagram(char[], char[]);
 
 int check_anagram(char str1[], char str2[]) {
-    int cal1[256] = { 0 };
+    int cal1[256] = { 0 }; // 265 ascii value
     int cal2 [256] = { 0 };
     int char1 = strlen(str1);
     int char2 = strlen(str2);
@@ -14,7 +14,7 @@ int check_anagram(char str1[], char str2[]) {
     }
 
     for (int i = 0; i < char1; i++) {
-        str1[i] = tolower(str1[i]);
+        str1[i] = tolower(str1[i]); // lower case
         str2[i] = tolower(str2[i]);
         cal1[str1[i]]++;
         cal2[str2[i]]++;
